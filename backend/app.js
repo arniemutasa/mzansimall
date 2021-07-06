@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 //COnfig file
-if (process.env.NODE_ENV === "PRODUCTION") {
+if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
 
